@@ -6,18 +6,16 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-import java.util.List;
+public class BestBuySearchPage {
 
-public class HomePage {
-
-    public HomePage(){
+    public BestBuySearchPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(id = "welcome")
-    public WebElement welcomeElement;
+    @FindBy(id = "gh-search-input")
+    public WebElement searchInputBox;
 
-    @FindBy(css = "div.menu>ul>li>a")
-    public List<WebElement> tabs;
+    @FindBy(css = ".header-search-button")
+    public WebElement searchButton;
 
 }
